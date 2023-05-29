@@ -66,3 +66,9 @@ D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\obj\Debug\ne
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\obj\Debug\net6.0\WebApi.pdb
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Entities.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Entities.pdb
