@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Repositories.EfCore;
+using WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +12,8 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Register -> Resolve in BooksController
-builder.Services.AddDbContext<RepositoryContext>(options => 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection")));
+builder.Services.ConfigureSqlContext(builder.Configuration);
+builder.Services.ConfigureRepositoryManager();
 
 var app = builder.Build();
 
