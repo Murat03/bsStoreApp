@@ -74,3 +74,5 @@ D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\ne
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Entities.pdb
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Repositories.dll
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Repositories.pdb
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Services.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Services.pdb
