@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pLA/faZ72vh67Z7qPKg9KLXEKeN5Lcn4udlJUc8sKINaDk20gn07PmdlD2mFTpe3/056tF4rW4po9xrW9rMIpw==",
+  "dgSpecHash": "z1Kc4XqKVR+A0sbfvfTecOZvzif7BXLayd9VKZ4Ir1FxJm2b/cHF67YOQxFYBKZKvDOE0stbQb4Ok7xF7kqMzQ==",
   "success": true,
   "projectFilePath": "D:\\Yazilim\\C#\\AspNetCoreWebApiCourse\\Applications\\bsStoreApp\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -9,12 +9,15 @@
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.16\\microsoft.entityframeworkcore.analyzers.6.0.16.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\murat\\.nuget\\packages\\nlog\\5.2.0\\nlog.5.2.0.nupkg.sha512",
+    "C:\\Users\\murat\\.nuget\\packages\\nlog.extensions.logging\\5.3.0\\nlog.extensions.logging.5.3.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\murat\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
