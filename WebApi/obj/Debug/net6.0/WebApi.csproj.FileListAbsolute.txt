@@ -83,3 +83,5 @@ D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\ne
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\nlog.config
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\NLog.dll
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\AutoMapper.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
