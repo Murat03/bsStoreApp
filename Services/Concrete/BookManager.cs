@@ -43,11 +43,10 @@ namespace Services.Concrete
             _manager.Save();
         }
 
-        public IEnumerable<Book> GetAllBooks(bool trackChanges)
+        public IEnumerable<BookDto> GetAllBooks(bool trackChanges)
         {
             var books = _manager.Book.GetAllBooks(trackChanges);
-
-            return books;
+            return _mapper.Map<IEnumerable<BookDto>>(books);
         }
 
         public Book GetOneBook(int id, bool trackChanges)
