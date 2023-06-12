@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Dynamic.Core;
 
 namespace Repositories.EfCore.Extensions
 {
@@ -14,6 +16,26 @@ namespace Repositories.EfCore.Extensions
             books.Where(book => book.Price >= minPrice && book.Price <= maxPrice);
 
         public static IQueryable<Book> Search(this IQueryable<Book> books,
-            string searchTerm) =>books.Where(b => b.Title.ToLower().Contains(searchTerm.Trim().ToLower()));
+            string searchTerm)
+        {
+            if (string.IsNullOrWhiteSpace(searchTerm))
+                return books;
+
+            return books.Where(b => b.Title.ToLower().Contains(searchTerm.Trim().ToLower()));
+        }
+
+        public static IQueryable<Book> Sort(this IQueryable<Book> books,
+            string orderByQueryString)
+        {
+            if (string.IsNullOrEmpty(orderByQueryString))
+                return books.OrderBy(b => b.Id);
+
+            var orderQuery = OrderQueryBuilder.CreateOrderQuery<Book>(orderByQueryString);
+
+            if (orderQuery is null)
+                return books.OrderBy(b => b.Id);
+
+            return books.OrderBy(orderQuery);
+        }
     }
 }
