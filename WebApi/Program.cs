@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using NLog;
 using Presentation.ActionFilters;
 using Repositories.EfCore;
+using Services.Concrete;
 using Services.Contracts;
 using WebApi.Extensions;
 
@@ -19,8 +20,8 @@ builder.Services.AddControllers(config =>
 })
 .AddCustomCsvFormatter()
 .AddXmlDataContractSerializerFormatters()
-.AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly)
-.AddNewtonsoftJson();
+.AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+//.AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.Configure<ApiBehaviorOptions>(options =>
@@ -39,6 +40,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ConfigureActionFilters();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureDataShaper();
+builder.Services.AddCustomMediaTypes();
+builder.Services.AddScoped<IBookLinks, BookLinks>();
 
 var app = builder.Build();
 
