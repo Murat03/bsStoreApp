@@ -15,9 +15,12 @@ using System.Threading.Tasks;
 
 namespace Presentation.Controllers
 {
+    //[ApiVersion("1.0")] -> extensions üzerinde tanımlandı.
     [ServiceFilter(typeof(LogFilterAttribute))]
     [ApiController]
     [Route("api/books")]
+    //[Route("api/{v:apiversion}/books")]
+
     public class BooksController : ControllerBase
     {
         private readonly IServiceManager _manager;
