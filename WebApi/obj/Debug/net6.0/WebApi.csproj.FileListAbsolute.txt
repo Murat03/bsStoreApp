@@ -87,3 +87,5 @@ D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\ne
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
 D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\Marvin.Cache.Headers.dll
+D:\Yazilim\C#\AspNetCoreWebApiCourse\Applications\bsStoreApp\WebApi\bin\Debug\net6.0\AspNetCoreRateLimit.dll
