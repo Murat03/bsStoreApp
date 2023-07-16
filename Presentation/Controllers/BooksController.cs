@@ -21,6 +21,7 @@ namespace Presentation.Controllers
     [ServiceFilter(typeof(LogFilterAttribute))]
     [ApiController]
     [Route("api/books")]
+    [ApiExplorerSettings(GroupName = "v1")]
     //[Route("api/{v:apiversion}/books")]
     //[ResponseCache(CacheProfileName = "5mins")]
     public class BooksController : ControllerBase
