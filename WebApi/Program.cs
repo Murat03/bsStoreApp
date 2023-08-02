@@ -18,12 +18,15 @@ builder.Services.AddControllers(config =>
 {
     config.RespectBrowserAcceptHeader = true;
     config.ReturnHttpNotAcceptable = true;
-    config.CacheProfiles.Add("5mins", new CacheProfile() { Duration = 300});
+    config.CacheProfiles.Add("5mins", new CacheProfile() { Duration = 300 });
 })
 .AddCustomCsvFormatter()
 .AddXmlDataContractSerializerFormatters()
-.AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
-//.AddNewtonsoftJson();
+.AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly)
+.AddNewtonsoftJson(opt =>
+    opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+)
+;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.Configure<ApiBehaviorOptions>(options =>
@@ -52,6 +55,9 @@ builder.Services.ConfigureRateLimitingOptions();
 builder.Services.AddHttpContextAccessor();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
+
+builder.Services.RegisterRepositories();
+builder.Services.RegisterServices();
 
 var app = builder.Build();
 

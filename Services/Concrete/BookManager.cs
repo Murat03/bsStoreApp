@@ -17,33 +17,35 @@ namespace Services.Concrete
 {
     public class BookManager : IBookService
     {
+        private readonly ICategoryService _categoryService;
         private readonly IRepositoryManager _manager;
         private readonly ILoggerService _logger;
         private readonly IMapper _mapper;
         private readonly IBookLinks _bookLinks;
 
-        public BookManager(IRepositoryManager manager, ILoggerService logger, IMapper mapper, IBookLinks bookLinks)
+        public BookManager(IRepositoryManager manager, ILoggerService logger, IMapper mapper, IBookLinks bookLinks, ICategoryService categoryService)
         {
             _manager = manager;
             _logger = logger;
             _mapper = mapper;
             _bookLinks = bookLinks;
+            _categoryService = categoryService;
         }
         public async Task<BookDto> CreateOneBookAsync(BookDtoForInsertion bookDtoForInsertion)
         {
+            var category = await _categoryService.GetOneCategoryAsync(bookDtoForInsertion.CategoryId, false);
+
             var book = _mapper.Map<Book>(bookDtoForInsertion);
             _manager.Book.CreateOneBook(book);
             await _manager.SaveAsync();
             return _mapper.Map<BookDto>(book);
         }
-
         public async Task DeleteOneBookAsync(int id, bool trackChanges)
         {
             var entity = await GetOneBookByIdAndCheckExists(id, trackChanges);
             _manager.Book.DeleteOneBook(entity);
             await _manager.SaveAsync();
         }
-
         public async Task<(LinkResponse linkResponse, MetaData metaData)> GetAllBooksAsync(LinkParameters linkParameters, bool trackChanges)
         {
             if(!linkParameters.BookParameters.ValidPriceRange)
@@ -54,7 +56,6 @@ namespace Services.Concrete
             var links = _bookLinks.TryGenerateLinks(booksDto, linkParameters.BookParameters.Fields, linkParameters.HttpContext);
             return (linkResponse: links, metaData: booksWithMetaData.MetaData);
         }
-
         public async Task<BookDto> GetOneBookAsync(int id, bool trackChanges)
         {
             var entity = await GetOneBookByIdAndCheckExists(id, trackChanges);
@@ -76,13 +77,11 @@ namespace Services.Concrete
             var bookDtoForUpdate = _mapper.Map<BookDtoForUpdate>(book);
             return (bookDtoForUpdate, book);
         }
-
         public async Task SaveChangesForPatchAsync(BookDtoForUpdate bookDtoForUpdate, Book book)
         {
             _mapper.Map(bookDtoForUpdate, book);
             await _manager.SaveAsync();
         }
-        
         private async Task<Book> GetOneBookByIdAndCheckExists(int id, bool trackChanges)
         {
             var entity = await _manager.Book.GetOneBookByIdAsync(id, trackChanges);
@@ -92,11 +91,15 @@ namespace Services.Concrete
 
             return entity;
         }
-
         public async Task<List<Book>> GetAllBooksAsync(bool trackChanges)
         {
             var books = await _manager.Book.GetAllBooksAsync(trackChanges);
             return books;
+        }
+
+        public async Task<IEnumerable<Book>> GetAllBooksWithDetailsAsync(bool trackChanges)
+        {
+            return await _manager.Book.GetAllBooksWithDetailsAsync(trackChanges);
         }
     }
 }

@@ -28,15 +28,21 @@ namespace Repositories.EfCore
             return PagedList<Book>.ToPagedList(books, bookParameters.PageNumber, bookParameters.PageSize);
         }
         public async Task<Book> GetOneBookByIdAsync(int id, bool trackChanges) =>
-            await FindByCondition(b => b.Id.Equals(id), trackChanges)
-            .SingleOrDefaultAsync();
-
+            await FindByCondition(b => b.Id.Equals(id), trackChanges).SingleOrDefaultAsync();
         public async Task<List<Book>> GetAllBooksAsync(bool trackChanges)
         {
             var books = await FindAll(trackChanges)
                 .OrderBy(books => books.Id)
                 .ToListAsync();
             return books;
+        }
+
+        public async Task<IEnumerable<Book>> GetAllBooksWithDetailsAsync(bool trackChanges)
+        {
+            return await _context.Books
+                .Include(b => b.Category)
+                .OrderBy(b => b.Id)
+                .ToListAsync();
         }
     }
 }
